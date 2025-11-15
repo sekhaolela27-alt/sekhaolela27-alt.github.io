@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lebz Beauty Co — Bookings</title>
+  <style>
+  :root {
+    --pink: #ff6fa3;
+    --bg: #ffffff;
+    --card: rgba(255,255,255,0.92);
+    --muted: #666;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    margin: 0;
+    background: url('LEBO LOGO.jpg') no-repeat center center fixed;
+    background-size: 60%;
+    background-color: var(--bg);
+    background-blend-mode: normal;
+    color: #111;
+  }
+
+  header {
+    background: linear-gradient(90deg, var(--pink), #ff9bc2);
+    color: white;
+    padding: 28px 20px;
+    text-align: center;
+  }
+
+  .brand {
+    font-size: 34px;
+    font-weight: 800;
+    letter-spacing: 0.6px;
+  }
+
+  .contact { margin-top: 6px; opacity: .95; }
+
+  main {
+    max-width: 1100px;
+    margin: 26px auto;
+    padding: 0 18px;
+  }
+
+  .grid { display: grid; grid-template-columns: 1fr 380px; gap: 20px; }
+  .card {
+    background: var(--card);
+    border-radius: 12px;
+    padding: 18px;
+    box-shadow: 0 6px 18px rgba(16, 24, 40, .06);
+  }
+
+  h2.section-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 12px 0;
+  }
+
+  h2.section-title .dot {
+    width: 10px;
+    height: 10px;
+    background: var(--pink);
+    border-radius: 50%;
+  }
+
+  .service-heading {
+    color: var(--pink);
+    font-weight: 700;
+    margin: 10px 0;
+  }
+
+  .service-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #f1f1f4;
+  }
+
+  .service-row:last-child { border-bottom: 0; }
+
+  .booking-panel { position: sticky; top: 20px; }
+
+  label {
+    display: block;
+    font-size: 13px;
+    margin-top: 12px;
+  }
+
+  input[type="text"], input[type="tel"], input[type="date"], select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border-radius: 8px;
+    border: 1px solid #e6e6ee;
+  }
+
+  button {
+    background: var(--pink);
+    color: white;
+    border: 0;
+    padding: 10px 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 700;
+  }
+
+  .muted { color: var(--muted); font-size: 13px; }
+
+  .footer {
+    margin-top: 20px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+  }
+
+  .success {
+    background: #e9fff6;
+    color: #056a47;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 12px;
+  }
+
+  @media(max-width:900px) {
+    .grid { grid-template-columns: 1fr; }
+    .booking-panel { position: relative; }
+    body {
+      background-size: 90%;
+      background-position: center top;
+    }
+  }
+</style>
+
+
+</head>
+<body>
+  <header>
+    <div class="brand">Lebz Beauty Co</div>
+    <div class="contact">Contact: <strong>072 829 4600</strong></div>
+  </header>
+
+  <main>
+    <div class="grid">
+      <!-- Services column -->
+      <section class="card">
+        <h2 class="section-title"><span class="dot"></span> Services</h2>
+
+        <div>
+          <div class="service-heading">French Nails</div>
+          <div class="service-row"><div>Short</div><div>R300</div></div>
+          <div class="service-row"><div>Medium</div><div>R350</div></div>
+          <div class="service-row"><div>Long</div><div>R400</div></div>
+          <div class="service-row"><div>Extra Long</div><div>R450</div></div>
+
+          <div class="service-heading">Toe Nails</div>
+          <div class="service-row"><div>Gel</div><div>R220</div></div>
+          <div class="service-row"><div>French Acrylic</div><div>R300</div></div>
+          <div class="service-row"><div>Acrylic Full Color</div><div>R230</div></div>
+          <div class="service-row"><div>Gel (French)</div><div>R250</div></div>
+
+          <div class="service-heading">Full Color</div>
+          <div class="service-row"><div>Short</div><div>R230</div></div>
+          <div class="service-row"><div>Medium</div><div>R260</div></div>
+          <div class="service-row"><div>Long</div><div>R300</div></div>
+          <div class="service-row"><div>Extra Long</div><div>R330</div></div>
+
+          <div class="service-heading">Two Tone Ombre</div>
+          <div class="service-row"><div>Short</div><div>R250</div></div>
+          <div class="service-row"><div>Medium</div><div>R280</div></div>
+          <div class="service-row"><div>Long</div><div>R330</div></div>
+          <div class="service-row"><div>Extra Long</div><div>R370</div></div>
+
+          <div class="service-heading">Treatments & Extras</div>
+          <div class="service-row"><div>Gel</div><div>R220</div></div>
+          <div class="service-row"><div>Buff & Shine</div><div>R150</div></div>
+          <div class="service-row"><div>Buff & Shine + Art</div><div>R200</div></div>
+          <div class="service-row"><div>Art (per nail)</div><div>R10 - R40</div></div>
+          <div class="service-row"><div>Soak off</div><div>R90</div></div>
+          <div class="service-row"><div>Refill</div><div>R200 + design dependent</div></div>
+          <div class="service-row"><div>Nail repair</div><div>R40</div></div>
+          <div class="service-row"><div>Chrome</div><div>R80</div></div>
+          <div class="service-row"><div>3D Design (20 per nail)</div><div>R80</div></div>
+          <div class="service-row"><div>Pigment color</div><div>R50</div></div>
+          <div class="service-row"><div>Air brush</div><div>R80</div></div>
+          <div class="service-row"><div>Stiletto & Almond Shape</div><div>R30</div></div>
+          <div class="service-row"><div>3D flower</div><div>R25</div></div>
+          <div class="service-row"><div>Blooming gel</div><div>R60</div></div>
+        </div>
+
+        <div class="footer">
+          Instagram: <strong>@lebzbeautyco</strong>
+        </div>
+      </section>
+
+      <!-- Booking panel -->
+      <aside class="booking-panel">
+        <div class="card">
+          <h2 class="section-title"><span class="dot"></span> Book an Appointment</h2>
+
+          <form id="bookingForm">
+            <label for="service">Choose a service</label>
+            <select id="service" required>
+              <option value="French Nails - Short">French Nails - Short — R300</option>
+              <option value="French Nails - Medium">French Nails - Medium — R350</option>
+              <option value="French Nails - Long">French Nails - Long — R400</option>
+              <option value="French Nails - Extra Long">French Nails - Extra Long — R450</option>
+              <option value="Toe Nails - Gel">Toe Nails - Gel — R220</option>
+              <option value="Toe Nails - French Acrylic">Toe Nails - French Acrylic — R300</option>
+              <option value="Toe Nails - Acrylic Full Color">Toe Nails - Acrylic Full Color — R230</option>
+              <option value="Toe Nails - Gel (French)">Toe Nails - Gel (French) — R250</option>
+              <option value="Full Color - Short">Full Color - Short — R230</option>
+              <option value="Full Color - Medium">Full Color - Medium — R260</option>
+              <option value="Full Color - Long">Full Color - Long — R300</option>
+              <option value="Two Tone Ombre - Short">Two Tone Ombre - Short — R250</option>
+              <option value="Buff & Shine">Buff & Shine — R150</option>
+              <option value="Refill">Refill — from R200</option>
+              <option value="Chrome">Chrome — R80</option>
+            </select>
+
+            <label for="phone">Phone number</label>
+            <input id="phone" type="tel" placeholder="e.g. 0728294600" pattern="[0-9+ ]{9,15}" required />
+            <small class="muted">We'll use this number as your payment reference.</small>
+
+            <label for="date">Select date</label>
+            <input id="date" type="date" required />
+
+            <label>Booking fee (non-refundable)</label>
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-top:6px">
+              <div><strong>R100</strong></div>
+              <div class="muted">Pay to Capitec: <strong>1488197286</strong></div>
+            </div>
+
+            <div style="margin-top:14px; display:flex; gap:8px">
+              <button id="payNow" type="button">Show payment instructions</button>
+              <button id="confirmBtn" type="submit" style="background:#6c757d">I already paid</button>
+            </div>
+
+            <div id="msg" role="status"></div>
+          </form>
+
+          <hr style="margin:16px 0;border-color:#f1f1f4">
+          <div>
+            <strong>How to pay</strong>
+            <ol style="padding-left:18px;margin-top:8px;color:var(--muted)">
+              <li>Open your banking app (Capitec, or any bank).</li>
+              <li>Send R100 to <strong>Capitec • 1488197286</strong>.</li>
+              <li>Use your phone number as the payment reference (exactly as entered above).</li>
+              <li>Press <em>I already paid</em> and upload/send proof to our WhatsApp <strong>072 829 4600</strong> if required.</li>
+            </ol>
+          </div>
+
+        </div>
+
+        <div class="card" style="margin-top:14px">
+          <strong>Upcoming bookings (local preview)</strong>
+          <div id="bookingsList" style="margin-top:10px; font-size:14px; color:var(--muted)">No bookings yet.</div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <script>
+    const dateInput = document.getElementById('date');
+    const today = new Date();
+    const yyyy = today.getFullYear();
+    const mm = String(today.getMonth()+1).padStart(2,'0');
+    const dd = String(today.getDate()).padStart(2,'0');
+    dateInput.min = `${yyyy}-${mm}-${dd}`;
+
+    const bookingsKey = 'lebz_bookings_v1';
+    function loadBookings(){
+      const raw = localStorage.getItem(bookingsKey);
+      return raw ? JSON.parse(raw) : [];
+    }
+    function saveBookings(list){ localStorage.setItem(bookingsKey, JSON.stringify(list)); }
+
+    function renderBookings(){
+      const list = loadBookings();
+      const container = document.getElementById('bookingsList');
+      if(!list.length) return container.textContent = 'No bookings yet.';
+      container.innerHTML = list.map(b=>`<div style="padding:8px;border-bottom:1px solid #f1f1f4"><strong>${b.service}</strong><div>${b.date} • ${b.phone}</div></div>`).join('');
+    }
+    renderBookings();
+
+    const form = document.getElementById('bookingForm');
+    const msg = document.getElementById('msg');
+    const payNow = document.getElementById('payNow');
+
+    payNow.addEventListener('click', ()=>{
+      const phone = document.getElementById('phone').value.trim();
+      const date = document.getElementById('date').value;
+      if(!phone || !date){ msg.innerHTML = '<div class="success">Please enter your phone and select a date first.</div>'; return; }
+      const overlay = document.createElement('div');
+      overlay.style.position='fixed'; overlay.style.inset=0; overlay.style.background='rgba(0,0,0,.45)'; overlay.style.display='flex'; overlay.style.alignItems='center'; overlay.style.justifyContent='center'; overlay.style.zIndex=9999;
+      const box = document.createElement('div'); box.style.width='420px'; box.style.maxWidth='92%'; box.style.background='white'; box.style.padding='18px'; box.style.borderRadius='12px'; box.style.boxShadow='0 12px 40px rgba(0,0,0,.2)';
+      box.innerHTML = `<h3 style="margin:0 0 8px 0">Payment instructions</h3>
+        <p style="margin:6px 0">Send <strong>R100</strong> booking fee to:</p>
+        <p style="margin:6px 0"><strong>Capitec</strong><br>Account number: <strong>1488197286</strong></p>
+        <p style="margin:6px 0">Use this phone number as the payment reference: <strong>${phone}</strong></p>
+        <p style="margin:6px 0; color: #666">After paying, press <em>I already paid</em> and send proof to WhatsApp <strong>072 829 4600</strong> if requested.</p>
+        <div style="display:flex; gap:8px; margin-top:12px"><button id='closeModal'>Close</button></div>`;
+      overlay.appendChild(box); document.body.appendChild(overlay);
+      document.getElementById('closeModal').addEventListener('click', ()=>{ overlay.remove(); });
+    });
+
+    form.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      const phone = document.getElementById('phone').value.trim();
+      const date = document.getElementById('date').value;
+      const service = document.getElementById('service').value;
+
+      if(!phone.match(/[0-9]{9,12}/) || !date){
+        msg.innerHTML = '<div class="success">Please enter a valid phone and date.</div>';
+        return;
+      }
+
+      const list = loadBookings();
+      const booking = {service, phone, date, created: new Date().toISOString()};
+      list.push(booking); saveBookings(list);
+      renderBookings();
+
+      msg.innerHTML = `<div class="success">Thanks! We recorded your booking for <strong>${date}</strong>. Please pay R100 to Capitec 1488197286 and use <strong>${phone}</strong> as the reference. Send proof to WhatsApp 072 829 4600 if asked.</div>`;
+      form.reset(); dateInput.min = `${yyyy}-${mm}-${dd}`;
+    });
+
+    (function prefill(){ const list = loadBookings(); if(list.length) document.getElementById('phone').value = list[list.length-1].phone; })();
+  </script>
+</body>
+</html>
