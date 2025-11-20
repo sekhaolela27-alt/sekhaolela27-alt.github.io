@@ -17,7 +17,7 @@
   body {
     font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
     margin: 0;
-    background: url('LEBO LOGO.jpg') no-repeat center center fixed;
+    background: url('04732ed9-a2b9-45d3-8a2d-0ebcfc111ef0.jpg') no-repeat center center fixed;
     background-size: 60%;
     background-color: var(--bg);
     background-blend-mode: normal;
@@ -236,7 +236,7 @@
 
             <div style="margin-top:14px; display:flex; gap:8px">
               <button id="payNow" type="button">Show payment instructions</button>
-              <button id="confirmBtn" type="submit" style="background:#6c757d">I already paid</button>
+              <button id="confirmBtn" type="submit" style="background:#6c757d">BOOK Appointment</button>
             </div>
 
             <div id="msg" role="status"></div>
@@ -249,7 +249,7 @@
               <li>Open your banking app (Capitec, or any bank).</li>
               <li>Send R100 to <strong>Capitec • 1488197286</strong>.</li>
               <li>Use your phone number as the payment reference (exactly as entered above).</li>
-              <li>Press <em>I already paid</em> and upload/send proof to our WhatsApp <strong>072 829 4600</strong> if required.</li>
+              <li>Press <em>BOOK Appointment</em> and upload/send proof to our WhatsApp <strong>072 829 4600</strong> if required.</li>
             </ol>
           </div>
 
@@ -328,6 +328,14 @@
     });
 
     (function prefill(){ const list = loadBookings(); if(list.length) document.getElementById('phone').value = list[list.length-1].phone; })();
+    document.getElementById('clearAppointmentsBtn').addEventListener('click', () => {
+  if (confirm("Are you sure you want to delete all old appointments?")) {
+    localStorage.removeItem(bookingsKey);  // Clear stored bookings
+    renderBookings();                       // Refresh the bookings list display
+    msg.innerHTML = '<div class="success">All old appointments have been removed.</div>';
+  }
+});
+
   </script>
 </body>
 </html>
