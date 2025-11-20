@@ -1,4 +1,3 @@
-<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -6,19 +5,27 @@
   <title>BUCLE IT INTERGRATION</title>
   <meta name="description" content="BUCLE — Technology and business solutions for a digital world.">
   <style>
+    
     :root{--accent:#0044ff;--muted:#000000;--bg:#f7fafc}
     *{box-sizing:border-box}
     body{font-family:Inter,Segoe UI,Roboto,Helvetica,Arial,sans-serif;margin:0;background:var(--bg);color:#ffffff}
     .container{max-width:1100px;margin:0 auto;padding:24px}
     header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
     .brand{display:flex;align-items:center;gap:12px}
-  nav a {
-  margin-left: 18px;
+nav a {
+  margin-left: 12px;
   text-decoration: none;
-  color: rgb(0, 204, 255);
+  padding: 8px 14px;
+  background: white;
+  color: var(--accent);
   font-weight: 600;
+  border-radius: 8px;
+  transition: 0.3s;
 }
-
+nav a:hover {
+  background: var(--accent);
+  color: white;
+}
     .hero{background:white;border-radius:12px;padding:28px;margin-top:18px;color:#111;border:1px solid #e6e9ee}
     .hero h1{margin:0;font-size:28px;color:var(--accent)}
     .hero p{color:var(--muted);line-height:1.5}
@@ -27,7 +34,7 @@
     .card{background:white;border-radius:12px;padding:18px}
     .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:18px}
     .services li{margin:10px 0}
-    footer{margin-top:28px;text-align:center;color:var(--muted);font-size:14px;padding:18px}
+    footer{margin-top:28px;text-align:center;color:var(WHITE);font-size:14px;padding:18px}
     .contact-list{list-style:none;padding:0;margin:0}
     .contact-list li{margin:8px 0}
     .team-collage{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-top:16px}
@@ -51,21 +58,17 @@
   <div class="container">
     <header>
       <div class="brand">
-        <div class="logo">B</div>
         <div>
-          <div style="font-weight:800">BUCLE IT INTERGRATION</div>
-          <div style="font-size:13px;color:var(WHITE)">Technology & Business Solutions</div>
+       
         </div>
       </div>
   <nav>
-  <a href="#about">About</a>
-  <a href="#approach">Approach</a>
-  <a href="#industries">Industries</a>
+    <nav>
   <a href="#services">Services</a>
   <a href="#contact">Contact</a>
   <a href="#book">Book Consultation</a>
-<a href="BUCLE%20IT%20INTERGRATION%20PROGRAMME.html" target="_blank">Internship Programme</a>
-
+  <a href="BUCLE%20IT%20INTERGRATION%20PROGRAMME.html" target="_blank">Internship Programme</a>
+</nav>
 
 </nav>
 
@@ -210,4 +213,5 @@
   </script>
 </body>
 </html>
+
 
