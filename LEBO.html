@@ -206,9 +206,8 @@
       <div style="margin-top:14px; display:flex; flex-wrap:wrap; gap:8px;">
         <button id="payNow" type="button">Show payment instructions</button>
 
-        <button id="confirmBtn" type="submit" style="background:#6c757d">
-          BOOK Appointment
-        </button>
+       <button type="button" onclick="sendBookingToWhatsApp()">Book Appointment</button>
+
       </div>
 
       <div id="msg"></div>
@@ -372,6 +371,41 @@
     }
   };
 
+</script>
+<script>
+function sendBookingToWhatsApp() {
+  const name = document.getElementById("name").value;
+  const phone = document.getElementById("phone").value;
+  const date = document.getElementById("date").value;
+
+  // Collect all selected services
+  const services = Array.from(document.querySelectorAll('input[name="service"]:checked'))
+    .map(s => s.value)
+    .join(", ");
+
+  if (!name || !phone || !date || services.length === 0) {
+    alert("Please fill in all booking details.");
+    return;
+  }
+
+  const adminNumber = "27685072848"; // WhatsApp format: 27 + number
+  const message =
+`BOOKING REQUEST
+-----------------------
+Name: ${name}
+Phone: ${phone}
+Services: ${services}
+Date: ${date}
+-----------------------
+Client has already paid booking fee.`;
+
+  const url = `https://wa.me/${adminNumber}?text=${encodeURIComponent(message)}`;
+
+  // Open WhatsApp chat
+  window.open(url, "_blank");
+  
+  alert("Your appointment request has been sent privately to admin WhatsApp!");
+}
 </script>
 
 </body>
